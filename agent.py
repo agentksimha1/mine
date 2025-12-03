@@ -6,15 +6,15 @@ import google.generativeai as genai
 from sentence_transformers import SentenceTransformer
 from dotenv import load_dotenv
 import pickle
-
+import streamlit as st
 # ---------------------------
 # Setup
 # ---------------------------
 BASE_DIR = pathlib.Path(__file__).resolve().parent
 VECTORSTORE_PATH = BASE_DIR / "vectorstore"
-load_dotenv()
 
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+
+GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
 if not GOOGLE_API_KEY:
     raise ValueError("❌ Missing GOOGLE_API_KEY")
 
@@ -137,4 +137,5 @@ if __name__ == "__main__":
         q = input("\nAsk me anything about mining: ")
         print("\n🔍 Searching FAISS...")
         print("💬 Answer:", ask(q))
+
 
