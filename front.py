@@ -5,7 +5,7 @@ import asyncio
 # ------------------------------
 # CONFIG
 # ------------------------------
-API_URL = "http://localhost:8000"  # Change if deployed
+API_URL = "https://huggingface.co/spaces/krishnasimha/mine-agent"  # Change if deployed
 
 st.set_page_config(
     page_title="Digital Mine Safety Officer",
@@ -118,4 +118,5 @@ elif section == "📄 Audit Report PDF":
                 st.info("⚡ Report served from cache if identical request was made before.")
             else:
                 st.error("Failed to generate PDF report.")
+
 
