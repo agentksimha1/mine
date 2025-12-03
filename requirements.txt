@@ -1,0 +1,12 @@
+streamlit
+requests
+fastapi
+uvicorn
+aiohttp
+reportlab
+PyPDF2
+sentence-transformers
+faiss-cpu
+sqlalchemy
+
+
