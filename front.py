@@ -5,7 +5,7 @@ import asyncio
 # ------------------------------
 # CONFIG
 # ------------------------------
-API_URL = "http://10.108.145.92:8501"
+API_URL = "https://krishnasimha-mine-agent.hf.space"
 
 
 st.set_page_config(
@@ -119,6 +119,7 @@ elif section == "📄 Audit Report PDF":
                 st.info("⚡ Report served from cache if identical request was made before.")
             else:
                 st.error("Failed to generate PDF report.")
+
 
 
 
